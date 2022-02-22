@@ -4,7 +4,10 @@ import Card from './Card';
 
 function App() {
   return (
-    <Card garbage= {false} />
+    <>
+      <Card garbage={true} />
+      <Card garbage={true} />
+    </>
   );
 }
 
