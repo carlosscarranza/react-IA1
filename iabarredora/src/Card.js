@@ -1,16 +1,13 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 
-export default function RecipeReviewCard(props) {
-    const hasGarbage = props.garbage;
+export default function RecipeReviewCard({garbage, cleanerHere}) {
 
     return (
 
         <Card sx={{ width: 345, backgroundColor: 'white', margin: '10px' }} >
-            {hasGarbage &&
+            {cleanerHere &&
                 <CardMedia
                     component="img"
                     height="194"
@@ -19,7 +16,7 @@ export default function RecipeReviewCard(props) {
                 />
             }
 
-            {hasGarbage &&
+            {garbage &&
                 <CardMedia
                     component="img"
                     height="194"
